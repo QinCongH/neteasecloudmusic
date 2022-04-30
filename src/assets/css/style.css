@@ -1,0 +1,10 @@
+.w{
+    width: 1100px
+}
+.bg_img{
+    background-image: url("../../assets/img/topbar.png");
+}
+.ft_img{
+    background: url("../../assets/img/foot_enter_new.png") no-repeat;
+    background-size: 110px 552px;
+}
