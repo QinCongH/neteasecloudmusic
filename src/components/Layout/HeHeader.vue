@@ -1,19 +1,32 @@
 <template>
   <header>
     <div>
-      <div class="he_header">
+      <div class="he_header w">
         <div class="logo bg_img">
           <a href="javascript:;"> </a>
         </div>
         <nav>
           <ul>
-            <li class="active"><a href="javascript:;">发现音乐</a></li>
-            <li><a href="javascript:;">我的音乐</a></li>
-            <li><a href="javascript:;">关注</a></li>
-            <li>
+            <router-link
+              to="/"
+              tag="li"
+              :class="{
+                active:
+                  $route.path === '/' || $route.meta.belong === 'FoundMusic',
+              }"
+            >
+              <a href="javascript:;"> 发现音乐 </a>
+            </router-link>
+            <router-link to="/MyMusic" tag="li" active-class="active">
+              <a href="javascript:;"> 我的音乐 </a>
+            </router-link>
+            <router-link to="/Attention" tag="li" active-class="active">
+              <a href="javascript:;"> 关注 </a>
+            </router-link>
+            <router-link to="/Download" tag="li" active-class="active">
               <a href="javascript:;"> 下载客户端 </a>
               <sup class="bg_img"> </sup>
-            </li>
+            </router-link>
           </ul>
         </nav>
         <div class="he_right">
@@ -32,9 +45,7 @@
           </div>
         </div>
       </div>
-      <div class="he_line">
-
-      </div>
+      <div class="he_line"></div>
     </div>
   </header>
 </template>
@@ -48,21 +59,19 @@ export default {
 <style scoped>
 header {
   width: 100%;
-
 }
-header>div{
+header > div {
   height: 75px;
   background-color: #242424;
   border-bottom: 1px solid #000;
 }
-.he_line{
-    height: 5px;
-    background: #c20c0c;
-    width: 100%;
+.he_line {
+  height: 5px;
+  background: #c20c0c;
+  width: 100%;
 }
 .he_header {
   height: 70px;
-  width: 1100px;
   display: flex;
   margin: auto;
   justify-content: space-between;

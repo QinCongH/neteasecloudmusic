@@ -1,19 +1,14 @@
 <template>
-<main>
-内容
-</main>
+  <main>
+    <div>我的音乐</div>
+  </main>
 </template>
 
 <script>
 export default {
-  name: "HeContainer",
-  components: {
-    
-  },
+  name: "MyMusic",
 };
 </script>
 
 <style>
-main{
-}
 </style>
