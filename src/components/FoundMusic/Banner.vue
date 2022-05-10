@@ -3,23 +3,20 @@
     <div class="swiper mySwiper" ref="mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide banner-bcg">
-          <div class="banner-content w">
-            <div class="download banner-img">
-              <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
-            </div>
-          </div>
+          <div class="banner-content w"></div>
         </div>
         <div class="swiper-slide banner-bcg">
-          <div class="banner-content w">
-            <div class="download banner-img">
-              <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
-            </div>
-          </div>
+          <div class="banner-content w"></div>
         </div>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
+      <div class="down w">
+        <div class="download banner-img">
+          <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -103,13 +100,19 @@ export default {
   height: inherit;
   background: url("../../assets/img/bannar.jpg") no-repeat center;
 }
+.down {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%); /* 移动元素本身50% */
+  height: inherit;
+  z-index: 111;
+  margin: auto;
+}
 .download {
   width: 254px;
   height: inherit;
-  position: absolute;
-  z-index: 33;
-  top: 0px;
-  right: 0px;
+  float:right;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
