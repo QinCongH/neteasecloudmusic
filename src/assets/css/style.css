@@ -8,3 +8,6 @@
     background: url("../../assets/img/foot_enter_new.png") no-repeat;
     background-size: 110px 552px;
 }
+.banner-img{
+    background-image: url("../../assets/img/download.png"); 
+}

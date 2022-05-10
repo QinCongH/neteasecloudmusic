@@ -1,12 +1,16 @@
 <template>
   <div>
-      推荐
+    <banner/>
   </div>
 </template>
 
 <script>
+import Banner from '../../components/FoundMusic/Banner.vue'
 export default {
-    name:'recommend'
+    name:'recommend',
+    components:{
+      Banner
+    }
 }
 </script>
 
