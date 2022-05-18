@@ -64,7 +64,7 @@ export default {
   height: inherit;
 }
 .nav_two_ctn ul li {
-  font-size: 0.075rem;
+  font-size: 14px;
   padding: 0px 10px;
   cursor: pointer;
   height: 25px;

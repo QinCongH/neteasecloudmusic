@@ -150,7 +150,7 @@ header > div {
   left: 45%;
 }
 .he_right {
-  width: 32%;
+  width: 37%;
   height: 70px;
   display: flex;
   justify-content: end;

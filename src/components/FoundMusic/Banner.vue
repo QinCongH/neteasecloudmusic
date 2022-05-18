@@ -12,6 +12,7 @@
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
+      <!-- 登录悬浮提示 -->
       <div class="down w">
         <div class="download banner-img">
           <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
@@ -110,7 +111,7 @@ export default {
   margin: auto;
 }
 .download {
-  width: 254px;
+  width: 23.3%;
   height: inherit;
   float:right;
   display: flex;
