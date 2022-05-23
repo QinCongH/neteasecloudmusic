@@ -2,11 +2,16 @@
   <div class="banner">
     <div class="swiper mySwiper" ref="mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide banner-bcg">
-          <div class="banner-content w"></div>
-        </div>
-        <div class="swiper-slide banner-bcg">
-          <div class="banner-content w"></div>
+        <div
+          class="swiper-slide banner-bcg"
+          v-for="(val, index) in homeMsgList"
+          :key="index"
+          :style="{ backgroundImage: 'url(' + val + ')' }"
+        >
+          <div
+            class="banner-content w"
+            :style="{ backgroundImage: 'url(' + val + ')' }"
+          ></div>
         </div>
       </div>
       <div class="swiper-button-next"></div>
@@ -26,6 +31,12 @@
 import Swiper from "swiper";
 export default {
   name: "Banner",
+  props: {
+    homeMsgList: {
+      type: Array,
+      default: [],
+    },
+  },
   components: {},
   methods: {
     init() {
@@ -40,6 +51,8 @@ export default {
           el: ".swiper-pagination",
           clickable: true, //可点击
         },
+        observer: true, // 修改swiper自己或子元素时，自动初始化swiper
+        observeParents: true, // 修改swiper的父元素时，自动初始化swiper
       });
     },
   },
@@ -93,13 +106,18 @@ export default {
   object-fit: cover;
 }
 .banner-bcg {
-  background: url("../../assets/img/bannar1.jpg") no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background: url("../../assets/img/bannar1.jpg") no-repeat center; */
   background-size: 100%;
+  position: relative;
 }
 .banner-content {
   position: relative;
   height: inherit;
-  background: url("../../assets/img/bannar.jpg") no-repeat center;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
 }
 .down {
   position: absolute;
@@ -113,7 +131,7 @@ export default {
 .download {
   width: 23.3%;
   height: inherit;
-  float:right;
+  float: right;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
